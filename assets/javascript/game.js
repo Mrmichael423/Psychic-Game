@@ -21,14 +21,20 @@ var computerChoice = letters[Math.floor(Math.random() * letters.length)];
 
  document.onkeypress = function(event) {
     var userGuess = event.key;
-    console.log(userGuess)
+    // console.log(userGuess)
     if(userGuess === computerChoice) {
         wins++
     } else {
-        letterGuessed.includes(userGuess) 
+        // letterGuessed.includes(userGuess)
         guesses--;
     } if (guesses = 0) {
         losses++
     }
 };
+
+winText.textContent = "Wins: " + wins;
+lossText.textContent = "Losses: " + losses;
+guessText.textContent = "Guesses left: " + guesses;
+leftText.textContent = "Letters guessed: " + leftText;
+
 
