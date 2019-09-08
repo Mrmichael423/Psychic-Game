@@ -1,6 +1,6 @@
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wins = 0;
-// console.log(wins)
+console.log(wins)
 var losses = 0;
 // console.log(losses)
 var guesses = 12;
@@ -15,26 +15,32 @@ var guessText = document.getElementById("guess");
 
 var leftText = document.getElementById("left");
 
-
 var computerChoice = letters[Math.floor(Math.random() * letters.length)];
- console.log(computerChoice)
+console.log(computerChoice)
+
 
  document.onkeypress = function(event) {
     var userGuess = event.key;
+    letterGuessed.push(userGuess)
     // console.log(userGuess)
-    if(userGuess === computerChoice) {
-        wins++
+   
+    if (userGuess === computerChoice) {
+        wins++;
     } else {
-        // letterGuessed.includes(userGuess)
         guesses--;
-    } if (guesses = 0) {
-        losses++
-    }
-};
+    } if (guesses === 0)
+    losses++;
+    
+    
+    winText.textContent = "Wins: " + wins;
+    
+    lossText.textContent = "Losses: " + losses;
+    
+    guessText.textContent = "Guesses left: " + guesses;
+    
+    for (var i = 0; i < letterGuessed.length; i++) {
+    leftText.textContent = "Letters guessed: " + letterGuessed;}
 
-winText.textContent = "Wins: " + wins;
-lossText.textContent = "Losses: " + losses;
-guessText.textContent = "Guesses left: " + guesses;
-leftText.textContent = "Letters guessed: " + leftText;
+};
 
 
