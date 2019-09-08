@@ -1,0 +1,36 @@
+.body {
+    background-image: url(https://www.monsterchildren.com/wp-content/uploads/2018/04/monster-children-psychic-1068x571.jpg);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.div {
+    text-align: center;
+    background-image: url(https://previews.123rf.com/images/peshkov/peshkov1708/peshkov170800590/85037728-drawn-blue-question-marks-on-white-background-enquiry-concept.jpg);
+    margin-top: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding-bottom: 200px;
+}
+
+.h1 {
+    height: 50px;
+    background: whitesmoke;
+    border: 2px solid black;
+    
+    
+}
+h2 {
+    margin-top: 15px;
+    background: whitesmoke;
+    border: 2px solid black;
+    
+}
+
+p {
+    background: whitesmoke;
+    margin-top: 25px;
+    border: 2px solid black;
+    text-align: left;
+    font-size: 20px
+
+}
